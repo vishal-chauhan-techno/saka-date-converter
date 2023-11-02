@@ -1,9 +1,5 @@
 # Saka Calendar Converter (Indian National Calendar)
 
-## WARNING!!!!
-
-This Package is currently in beta mode.
-
 ## Requirements
 
 PHP 7.0 and later.
@@ -13,7 +9,7 @@ PHP 7.0 and later.
 You can install the bindings via [Composer](http://getcomposer.org/). Run the following command:
 
 ```bash
-composer require vishal-chauhan-techno/saka-date-converter:0.1.0
+composer require vishal-chauhan-techno/saka-date-converter
 ```
 
 ```php
