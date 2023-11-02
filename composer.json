@@ -2,7 +2,7 @@
     "name": "vishal-chauhan-techno/saka-date-converter",
     "description": "This package is for convert gregorian calendar date to saka calendar (Indian National Calendar).",
     "type": "library",
-    "license": "Open Source",
+    "license": "O-UDA-1.0",
     "autoload": {
         "psr-4": {
             "VishalChauhanTechno\\SakaDateConverter\\": "src/"
