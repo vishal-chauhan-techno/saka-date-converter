@@ -23,13 +23,14 @@ class DateConverter
     private $newMonth;
     private $newDay;
 
-    public function __construct(string                           $date,
-                                GetIndianCalendarMonth           $month,
-                                GetIndianCalendarWeek            $week,
-                                GetIndianCalendarDays            $days,
-                                GetIndianCalendarFirstDayOfMonth $firstDay)
+    public function __construct(string $date)
     {
         $this->timeStamp = strtotime($date);
+
+        $month = new GetIndianCalendarMonth();
+        $week = new GetIndianCalendarWeek();
+        $days = new GetIndianCalendarDays($this->timeStamp);
+        $firstDay = new GetIndianCalendarFirstDayOfMonth($this->timeStamp);
 
         $dateFormatter = new GetFormattedDate($this->timeStamp);
 
