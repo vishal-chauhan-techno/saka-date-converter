@@ -1,0 +1,20 @@
+{
+    "name": "vishal/saka-date-converter",
+    "description": "This package is for convert gregorian calendar date to saka calendar (Indian National Calendar).",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Vishal\\SakaDateConverter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vishal Chauhan",
+            "email": "vishal.chauhan@technostacks.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "php": ">=5.4"
+    }
+}
