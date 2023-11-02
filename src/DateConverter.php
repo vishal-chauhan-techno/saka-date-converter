@@ -1,10 +1,12 @@
 <?php
 
-use src\GetFormattedDate;
-use src\GetIndianCalendarDays;
-use src\GetIndianCalendarFirstDayOfMonth;
-use src\GetIndianCalendarMonth;
-use src\GetIndianCalendarWeek;
+namespace Vishal\SakaDateConverter;
+
+use Vishal\SakaDateConverter\GetFormattedDate;
+use Vishal\SakaDateConverter\GetIndianCalendarDays;
+use Vishal\SakaDateConverter\GetIndianCalendarFirstDayOfMonth;
+use Vishal\SakaDateConverter\GetIndianCalendarMonth;
+use Vishal\SakaDateConverter\GetIndianCalendarWeek;
 
 class DateConverter
 {
