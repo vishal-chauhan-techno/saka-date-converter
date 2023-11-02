@@ -12,9 +12,42 @@ You can install the bindings via [Composer](http://getcomposer.org/). Run the fo
 composer require vishal-chauhan-techno/saka-date-converter
 ```
 
-```php
-$get_date = new DateConverter("2023-11-02");
-$date = $get_date->convertDateToHinduDate();
+### Usage:
 
-echo $date;  //Return Bṛhaspativāra, Kartika, 11, 1945
+To full date:
+```php
+Use Vishal\SakaDateConverter\DateConverter;
+
+$get_date = new DateConverter("2023-11-02");
+$fullDate = $get_date->convertDateToHinduDate();
+
+echo $fullDate;  //Return Bṛhaspativāra, Kartika, 11, 1945
+```
+
+To get week day
+```php
+$weekDay = $get_date->getWeekDay();
+
+echo $weekDay;  //Return Bṛhaspativāra
+```
+
+To get month
+```php
+$month = $get_date->getMonth();
+
+echo $month;  //Return Kartika
+```
+
+To get date
+```php
+$date = $get_date->getDate();
+
+echo $date;  //Return 11
+```
+
+To get year
+```php
+$year = $get_date->getYear();
+
+echo $year;  //Return 1945
 ```

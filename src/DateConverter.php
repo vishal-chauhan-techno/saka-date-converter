@@ -23,6 +23,11 @@ class DateConverter
     private $newMonth;
     private $newDay;
 
+    /**
+     * @param string $date Allowed format YYYY-MM-DD, DD-MM-YYYY and MM-DD-YYYY
+     *
+     * @see https://php.net/manual/en/datetime.format.php
+     */
     public function __construct(string $date)
     {
         $this->timeStamp = strtotime($date);
@@ -84,7 +89,7 @@ class DateConverter
     }
 
     /**
-     * @return string
+     * @return string Format - Day, Month, Day, Year;
      */
     public function convertDateToHinduDate(): string
     {
@@ -92,18 +97,34 @@ class DateConverter
     }
 
     /**
-     * @return string
+     * @return string ["Ravivāra", "Somavāra", "Maṅgalavāra", "Budhavāra", "Bṛhaspativāra", "Śukravāra", "Śanivāra"]
      */
-    protected function getWeekDay(): string
+    public function getWeekDay(): string
     {
         return $this->weekDays[$this->weekDay];
     }
 
     /**
-     * @return string
+     * @return string ['Chhaitra', 'Vaishakha', 'Jyeshtha', 'Ashadha', 'Shravana', 'Bhaadra', 'Ashwin', 'Kartika', 'Agrahayana', 'Pausha', 'Magha', 'Phalguna']
      */
-    protected function getMonth(): string
+    public function getMonth(): string
     {
         return $this->shakaMonths[$this->newMonth];
+    }
+
+    /**
+     * @return int
+     */
+    public function getDate(): string
+    {
+        return $this->newDay;
+    }
+
+    /**
+     * @return int
+     */
+    public function getYear(): string
+    {
+        return $this->newYear;
     }
 }
