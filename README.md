@@ -1,9 +1,5 @@
 # Saka Calendar Converter (Indian National Calendar)
 
-## WARNING!!!!
-
-This Package is currently in beta mode.
-
 ## Requirements
 
 PHP 7.0 and later.
