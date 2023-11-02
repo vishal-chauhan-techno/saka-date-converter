@@ -1,6 +1,6 @@
 <?php
 
-namespace Vishal\SakaDateConverter;
+namespace VishalChauhanTechno\SakaDateConverter;
 
 class DateConverter
 {
@@ -26,12 +26,12 @@ class DateConverter
     {
         $this->timeStamp = strtotime($date);
 
-        $month = new GetIndianCalendarMonth();
-        $week = new GetIndianCalendarWeek();
-        $days = new GetIndianCalendarDays($this->timeStamp);
-        $firstDay = new GetIndianCalendarFirstDayOfMonth($this->timeStamp);
+        $month = new Helpers\GetIndianCalendarMonth();
+        $week = new Helpers\GetIndianCalendarWeek();
+        $days = new Helpers\GetIndianCalendarDays($this->timeStamp);
+        $firstDay = new Helpers\GetIndianCalendarFirstDayOfMonth($this->timeStamp);
 
-        $dateFormatter = new GetFormattedDate($this->timeStamp);
+        $dateFormatter = new Helpers\GetFormattedDate($this->timeStamp);
 
         $this->weekDays = $week->getWeekDays();
         $this->daysOfHinduMonth = $days->getDays();

@@ -15,8 +15,9 @@ composer require vishal-chauhan-techno/saka-date-converter
 ### Usage:
 
 To full date:
+
 ```php
-Use Vishal\SakaDateConverter\DateConverter;
+Use VishalChauhanTechno\SakaDateConverter\DateConverter;
 
 $get_date = new DateConverter("2023-11-02");
 $fullDate = $get_date->convertDateToHinduDate();

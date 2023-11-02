@@ -1,6 +1,6 @@
 <?php
 
-namespace Vishal\SakaDateConverter;
+namespace VishalChauhanTechno\SakaDateConverter\Helpers;
 
 class GetIndianCalendarDays
 {
