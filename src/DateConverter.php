@@ -1,12 +1,6 @@
 <?php
 
-namespace Vishal\SakaDateConverter;
-
-use Vishal\SakaDateConverter\GetFormattedDate;
-use Vishal\SakaDateConverter\GetIndianCalendarDays;
-use Vishal\SakaDateConverter\GetIndianCalendarFirstDayOfMonth;
-use Vishal\SakaDateConverter\GetIndianCalendarMonth;
-use Vishal\SakaDateConverter\GetIndianCalendarWeek;
+namespace VishalChauhanTechno\SakaDateConverter;
 
 class DateConverter
 {
@@ -23,16 +17,21 @@ class DateConverter
     private $newMonth;
     private $newDay;
 
+    /**
+     * @param string $date Allowed format YYYY-MM-DD, DD-MM-YYYY and MM-DD-YYYY
+     *
+     * @see https://php.net/manual/en/datetime.format.php
+     */
     public function __construct(string $date)
     {
         $this->timeStamp = strtotime($date);
 
-        $month = new GetIndianCalendarMonth();
-        $week = new GetIndianCalendarWeek();
-        $days = new GetIndianCalendarDays($this->timeStamp);
-        $firstDay = new GetIndianCalendarFirstDayOfMonth($this->timeStamp);
+        $month = new Helpers\GetIndianCalendarMonth();
+        $week = new Helpers\GetIndianCalendarWeek();
+        $days = new Helpers\GetIndianCalendarDays($this->timeStamp);
+        $firstDay = new Helpers\GetIndianCalendarFirstDayOfMonth($this->timeStamp);
 
-        $dateFormatter = new GetFormattedDate($this->timeStamp);
+        $dateFormatter = new Helpers\GetFormattedDate($this->timeStamp);
 
         $this->weekDays = $week->getWeekDays();
         $this->daysOfHinduMonth = $days->getDays();
@@ -84,7 +83,7 @@ class DateConverter
     }
 
     /**
-     * @return string
+     * @return string Format - Day, Month, Day, Year;
      */
     public function convertDateToHinduDate(): string
     {
@@ -92,18 +91,34 @@ class DateConverter
     }
 
     /**
-     * @return string
+     * @return string ["Ravivāra", "Somavāra", "Maṅgalavāra", "Budhavāra", "Bṛhaspativāra", "Śukravāra", "Śanivāra"]
      */
-    protected function getWeekDay(): string
+    public function getWeekDay(): string
     {
         return $this->weekDays[$this->weekDay];
     }
 
     /**
-     * @return string
+     * @return string ['Chhaitra', 'Vaishakha', 'Jyeshtha', 'Ashadha', 'Shravana', 'Bhaadra', 'Ashwin', 'Kartika', 'Agrahayana', 'Pausha', 'Magha', 'Phalguna']
      */
-    protected function getMonth(): string
+    public function getMonth(): string
     {
         return $this->shakaMonths[$this->newMonth];
+    }
+
+    /**
+     * @return int
+     */
+    public function getDate(): string
+    {
+        return $this->newDay;
+    }
+
+    /**
+     * @return int
+     */
+    public function getYear(): string
+    {
+        return $this->newYear;
     }
 }
