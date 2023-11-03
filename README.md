@@ -1,4 +1,4 @@
-# Saka Calendar Converter (Indian National Calendar)
+# Gregorian Calendar Date to Saka Calendar Date Converter (Indian National Calendar)
 
 ## Requirements
 
@@ -52,3 +52,7 @@ $year = $get_date->getYear();
 
 echo $year;  //Return 1945
 ```
+
+## References
+[Wikipedia](https://en.wikipedia.org/wiki/Indian_national_calendar)
+Indian national calendar - All conversion calculations are based on information from Wikipedia.
