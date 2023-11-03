@@ -1,19 +1,21 @@
 {
-    "name": "vishal-chauhan-techno/saka-date-converter",
-    "description": "This package is for convert gregorian calendar date to saka calendar (Indian National Calendar).",
-    "type": "library",
-    "license": "O-UDA-1.0",
-    "autoload": {
-        "psr-4": {
-            "VishalChauhanTechno\\SakaDateConverter\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Vishal Chauhan",
-            "email": "vishal.chauhan@technostacks.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {}
+  "name": "vishal-chauhan-techno/saka-date-converter",
+  "description": "This package is for convert gregorian calendar date to saka calendar (Indian National Calendar).",
+  "type": "library",
+  "license": "O-UDA-1.0",
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "VishalChauhanTechno\\SakaDateConverter\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Vishal Chauhan",
+      "email": "vishal.chauhan@technostacks.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {}
 }
